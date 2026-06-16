@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "2WmhgKCKEt4yIncAVB7NC"
+uri = "file://dist.zip"
+type = "unspecified"
+title = "Facebook Login Clone — dist.zip"
