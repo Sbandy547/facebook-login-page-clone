@@ -6,25 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="https://www.facebook.com/favicon.ico">
-
-    <title>Facebook-log in or sign up</title>
+    <title>Facebook - log in or sign up</title>
 </head>
+
 <body>
-    <div class="facebook-page">
-        <div class="container">
-            <div class="textbox">
-                <img class="logo" src="image/4lCu2zih0ca.svg" alt="">
-                <p>Facebook helps you connect and share with the people in your life.</p>
+    <div class="page">
+        <div class="top-bar">
+            <button class="back-btn">&#8249;</button>
+        </div>
+
+        <div class="main">
+            <div class="logo-wrap">
+                <div class="fb-icon">f</div>
             </div>
-            <div class="login">
-                <form action="#">
-                    <input type="text" placeholder="Email address or Phone number" required>
-                    <input type="password" placeholder="Password" required>
-                    <button class="login">Log In</button><a href="#">Forget Password ?</a>
-                    <hr>
-                    <button class="create-account">Create New Account</button>
-                </form>
-                <p><a href="#">Create a Page </a>for a celebrity, brand or business.</p>
+
+            <form action="#">
+                <div class="input-group">
+                    <input type="text" id="email" placeholder=" " required>
+                    <label for="email">Mobile number or email address</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder=" " required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" class="btn-login">Log in</button>
+                <a href="#" class="forgot">Forgotten password?</a>
+            </form>
+        </div>
+
+        <div class="bottom">
+            <button class="btn-create">Create new account</button>
+            <div class="meta-logo">
+                <svg class="meta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 287.56 191.06">
+                    <defs>
+                        <linearGradient id="g1" x1="19.85%" y1="0%" x2="80.15%" y2="100%">
+                            <stop offset="0%" stop-color="#0064E1"/>
+                            <stop offset="40%" stop-color="#0064E1"/>
+                            <stop offset="83%" stop-color="#0073EE"/>
+                            <stop offset="100%" stop-color="#0082FB"/>
+                        </linearGradient>
+                        <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#0082FB"/>
+                            <stop offset="100%" stop-color="#0064E0"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M31.06 126.4C31.06 140.51 34.3 151.44 39.5 158.12C46.27 166.69 56.06 170.86 66.83 170.86C78.86 170.86 89.39 167.62 109.96 141.24L137.07 104.42C154.1 81.26 167.81 65.57 192.17 65.57C213.41 65.57 233.46 77.12 248.09 99.79V66.09C234.53 47.05 218.26 37.44 198.79 37.44C176.14 37.44 159.61 49.55 138.72 78.08L129.4 90.87C107.95 121.16 98.06 131.5 78.33 131.5C61.8 131.5 49.84 122.98 41.47 107.87L31.06 126.4Z" fill="url(#g1)"/>
+                    <path d="M66.83 37.44C46.23 37.44 31.06 52.11 31.06 83.48C31.06 96.15 33.63 106.29 38.64 113.6L68.44 66.09C79.35 48.75 91.93 39.56 103.47 39.56C116.84 39.56 127.81 50.15 136.62 71.31L138.82 76.73C125.35 95.75 117.47 108.14 117.47 108.14C100.52 135.07 87.72 148.91 66.83 148.91C42.1 148.91 31.06 131.37 31.06 107.42" fill="url(#g2)"/>
+                    <path d="M248.09 153.88C236.17 165.83 224.55 170.86 211.48 170.86C192.78 170.86 178.52 162.2 159.44 133.28L139.78 102.97L113.32 143.12C96.73 167.4 83.48 185.06 66.83 185.06C58.9 185.06 51.29 182.8 44.52 178.52" fill="none"/>
+                    <path d="M248.09 153.88C259.71 141.91 268.24 124.13 268.24 101.53C268.24 64.38 246.56 37.44 212.36 37.44C192.17 37.44 177.06 46.81 157.67 73.97L113.91 134.8C99.78 154.35 90.82 162.88 78.33 162.88C61.8 162.88 49.84 153.13 41.47 137.68L31.06 156.21C42.43 172.75 57.94 185.06 78.33 185.06C98.65 185.06 114.79 173.05 137.48 143.19L182.25 81.52C195.22 63.62 205.01 55.37 216.74 55.37C232.83 55.37 244.32 67.83 244.32 101.53C244.32 118.04 240.33 130.51 234.25 138.9L248.09 153.88Z" fill="white"/>
+                </svg>
+                <span>Meta</span>
             </div>
         </div>
     </div>
