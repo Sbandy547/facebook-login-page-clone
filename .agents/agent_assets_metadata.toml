@@ -12,3 +12,9 @@ id = "ar8_gSlYabmD1ezQ0QYev"
 uri = "file://hostking_upload.zip"
 type = "unspecified"
 title = "HostKing Upload Package"
+
+[[outputs]]
+id = "AT7h-clPw3jmJ_3DXij6m"
+uri = "file://index_fix.zip"
+type = "unspecified"
+title = "index.html fix — extract and upload to public_html"
