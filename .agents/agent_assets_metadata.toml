@@ -6,3 +6,9 @@ id = "2WmhgKCKEt4yIncAVB7NC"
 uri = "file://dist.zip"
 type = "unspecified"
 title = "Facebook Login Clone — dist.zip"
+
+[[outputs]]
+id = "ar8_gSlYabmD1ezQ0QYev"
+uri = "file://hostking_upload.zip"
+type = "unspecified"
+title = "HostKing Upload Package"
